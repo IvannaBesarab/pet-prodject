@@ -4,23 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { LoginPageComponent } from './login-page/login-page.component';
 import { MainPageModule } from './main-page/main-page.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { EntryPageModule } from './entry-page/entry-page.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginPageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MainPageModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    EntryPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

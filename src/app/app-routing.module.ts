@@ -1,13 +1,11 @@
 import { MainPageComponent } from './main-page/main-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginPageComponent } from './login-page/login-page.component';
-
 
 const routes: Routes = [
-  { path: '', redirectTo: 'pizza-party', pathMatch: 'full' },
   { path: 'pizza-party', loadChildren: './main-page/main-page.module#MainPageModule' },
-  { path: '/login', component: LoginPageComponent }
+  { path: '', loadChildren: './entry-page/entry-page.module#EntryPageModule' },
+  { path: '**', redirectTo: 'pizza-party', pathMatch: 'full' },
 ];
 
 @NgModule({
