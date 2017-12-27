@@ -8,6 +8,7 @@ import { MainPageModule } from './main-page/main-page.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { EntryPageModule } from './entry-page/entry-page.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -17,12 +18,13 @@ import { EntryPageModule } from './entry-page/entry-page.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MainPageModule,
     CoreModule,
     SharedModule,
-    EntryPageModule
+    EntryPageModule,
+    MainPageModule
   ],
   providers: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
