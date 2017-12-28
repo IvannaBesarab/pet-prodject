@@ -1,0 +1,16 @@
+:host{    
+    display: block;
+    height: 100%;
+
+    .header-fixed{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .page-content{
+        padding-top: 64px;
+        background-color: #f0eff4;
+    }
+}
+

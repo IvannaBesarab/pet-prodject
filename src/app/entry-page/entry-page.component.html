@@ -1,5 +1,13 @@
-<p>
-  entry-page works!
-</p>
+<header class="header-fixed">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Pizza Delivery</span>
+      <mat-icon>local_pizza</mat-icon>
+    </mat-toolbar-row>
 
-<router-outlet></router-outlet>
+  </mat-toolbar>
+</header>
+<div fxLayout="row" fxFlex class="page-content">
+    <router-outlet></router-outlet>
+</div>
+
