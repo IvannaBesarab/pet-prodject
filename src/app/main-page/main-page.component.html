@@ -1,5 +1,36 @@
-<app-header></app-header>
-<p>
-  main-page works!
-</p>
-<router-outlet></router-outlet>
+
+<div fxLayout="row">
+  
+  <app-header></app-header>
+
+  <!-- <router-outlet></router-outlet> -->
+    <div fxFlex>
+      <mat-sidenav-container>
+        <mat-sidenav #sidenav mode="side" opened="true">
+          Sidenav
+        </mat-sidenav>
+      
+        <mat-sidenav-content>
+          <p>
+            kfvndf
+          </p>
+          <p>
+           dfbfgbf
+          </p>
+          <p>
+            dfbxfgbf
+          </p>
+          <p>
+            <button mat-button (click)="sidenav.toggle()">Toggle</button>
+      
+          </p>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    
+
+    </div>
+   
+  
+  
+  <mat-toolbar>Footer</mat-toolbar>
+</div>

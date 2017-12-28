@@ -1,18 +1,35 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatToolbarModule } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatIconModule,
+  MatInputModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSidenavModule
+} from '@angular/material';
 
-const materialComponents = [
-  MatToolbarModule
+const importedModules = [
+  MatToolbarModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatIconModule,
+  MatInputModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSidenavModule
 ];
-
 
 @NgModule({
   imports: [
     CommonModule,
-    MatToolbarModule
+    ...importedModules
   ],
-  exports: [ MatToolbarModule ]
+  exports: [ ...importedModules ]
 })
 export class AssembledMaterialModule { }
