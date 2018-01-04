@@ -1,3 +1,63 @@
-<p>
-  register works!
-</p>
+<div fxLayout="row" fxFlex>
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+        <mat-card class="login-form-size">
+            <mat-card-header>
+                <mat-card-title><span class="mat-title">Register</span></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form fxLayout="column" (ngSubmit)="onSubmit()" #f="ngForm">
+                    <mat-form-field>
+                        <input matInput
+                               placeholder="Your username"
+                               type="text"
+                               name="user_name"
+                               ngModel
+                               required>
+                        <mat-icon matSuffix>verified_user</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput
+                               placeholder="Your password"
+                               [type]="hide ? 'text' : 'password'"
+                               name="password"
+                               ngModel>
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput
+                               placeholder="Your email"
+                               type="email"
+                               name="user_email"
+                               ngModel
+                               email>
+                        <mat-icon matSuffix>email</mat-icon>
+                    </mat-form-field>
+
+                    <div fxLayout="row" fxLayoutAlign="end center">
+                        <button mat-button
+                                color="primary"
+                                type="submit"
+                                class="button-space"
+                                [disabled]="!f.valid">Register
+                        </button>
+                    </div>
+                    <div>
+                        <p>Register with</p>
+                        <div>
+                            <button mat-raised-button color="accent" type="button" class="button-space-y">Facebook
+                            </button>
+                            <button mat-raised-button color="warn" type="button" class="button-space-y">Github</button>
+                            <button mat-raised-button color="primary" type="button" class="button-space-y">Twitter
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div>
+                    {{registerForm.value.password}}
+                </div>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</div>
